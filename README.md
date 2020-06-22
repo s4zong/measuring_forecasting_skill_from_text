@@ -7,8 +7,25 @@ Measuring Forecasting Skill from Text
 
 Shi Zong, Alan Ritter, Eduard Hovy
 
-ACL 2020 (To Appear)
+ACL 2020
 
+https://www.aclweb.org/anthology/2020.acl-main.473.pdf
+
+```
+@inproceedings{zong-etal-2020-measuring,
+    title = "Measuring Forecasting Skill from Text",
+    author = "Zong, Shi  and
+      Ritter, Alan  and
+      Hovy, Eduard",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.473",
+    pages = "5317--5331",
+}
+```
 
 ### Dataset descriptions
 
@@ -32,7 +49,7 @@ We provide some sample processing codes under `extraction` folder. Note that you
 
 We provide our code for extracting financial numerical estimates from analysts notes in `extract_numerical_forecasts.py`.
 
-We tokenize our financial analyst notes by Stanford CoreNLP. The tagging results shall be organized in .jsonl format: each line has a 'tagging' field containing a list, with each element a tuple `[a_sentence_id, a_tokenized_sentence]` (note that tokenized money value, e.g., to recover '$' and '10' into '$10' as shown in the following example). Then run `extractEstimatesNew(input_data)` to get the extraction results.
+We tokenize our financial analyst notes by Stanford CoreNLP. The tagging results shall be organized in .jsonl format: each line has a 'tagging' field containing a list, with each element a tuple `[a_sentence_id, a_tokenized_sentence]` (note that tokenized money values need to be recovered, e.g., to reconnect '$' and '10' into '$10' as shown in the following example). Then run `extractEstimatesNew(input_data)` to get the extraction results.
 
 ```angular2
 [{'tagging': 
